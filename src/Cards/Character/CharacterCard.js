@@ -1,24 +1,26 @@
 import React from "react";
 import {useEffect} from "react";
-import axios from "axios";
+import useFetch from "../../Hooks/UseFetch";
 
 
 import "./CharacterCard.css"
 
-const characterAll = "http://localhost:8080/character/all"
+const characterAll = "http://localhost:8080/character/1"
 
-export default class CharacterCard extends React.Component {
+const Jokes = () => {
+    const url = characterAll;
+    const { data, loading, error } = useFetch(url);
 
+    if (loading) return (
+        <div>Loading...</div>
+    )
 
-    render() {
+    return (
+        <div>
+            {error && <div>{error}</div>}
+            {data && <div>{<div>{data}</div>}</div>}
+        </div>
+    );
+};
 
-
-        return (
-
-            <div className="CharacterCard">
-                <h1 className="CharacterCard-Title">Josie Pullen</h1>
-            </div>
-        );
-
-    }
-}
+export default Jokes;
