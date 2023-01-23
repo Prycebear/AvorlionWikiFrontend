@@ -5,8 +5,8 @@ export default function Navbar() {
     return (
         <div className = "nav">
             <h1>Avorlion</h1>
-            <ul>
-                <li><a href="">Maps</a></li>
+            <ul className="NavElement">
+                <li><a  href="">Maps</a></li>
                 <li><a href="" >Characters</a></li>
                 <li><a href="">Locations</a></li>
                 <li><a href="">History</a></li>

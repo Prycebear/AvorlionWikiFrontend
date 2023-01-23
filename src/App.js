@@ -3,6 +3,7 @@ import './App.css';
 
 import Navbar from "./Navbar/Navbar";
 import CharacterCard from "./Cards/Character/CharacterCard";
+import CharacterList from "./Pages/CharacterList";
 
 function App() {
     return (
@@ -11,11 +12,12 @@ function App() {
                 <Navbar/>
 
             </header>
-            <body className="App-header">
+            <body>
 
-            <CharacterCard/>
+            <CharacterList></CharacterList>
+            <CharacterList></CharacterList>
 
-            <img src={logo} className="App-logo" alt="logo"/>
+
             </body>
         </div>
     );

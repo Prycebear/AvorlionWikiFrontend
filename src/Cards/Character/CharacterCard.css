@@ -1,14 +1,24 @@
-
 .CharacterCard{
-    background: lightslategray;
-    border-radius: 5px;
-    width: 100%;
+    background: darkslategray;
+    border: slategray solid;
+    margin: 2%;
+    width: 20%;
+    height: 75%;
+    border-radius: 7%;
+
+
 }
 
-card__background{
-    background: lightslategray;
+img{
+    max-width: 100%;
+    border-radius: 8% 8% 0% 0%;
+
 }
 
-.Content{
+.CardContent{
+    margin: 3%;
+}
 
+li{
+    list-style-type: none;
 }
