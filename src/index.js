@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CharacterCard from "./Cards/Character/CharacterCard";
+import CharacterList from "./Pages/CharacterList";
 
 
 
