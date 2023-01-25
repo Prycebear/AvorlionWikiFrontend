@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import CharacterCard from "../Components/CharacterCards/CharacterCard";
 
-export function characterFetch (url){
+export function CharacterFetch(url) {
     const [groups, setGroups] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -20,18 +20,15 @@ export function characterFetch (url){
         return <p>Loading...</p>;
     }
     return (
-        <div className="App">
-            <header className="App-header">
-                <div className="App-intro">
-                    {groups.map(group =>
-                        <div key={group.id}>
-                            <CharacterCard group ={group}/>
-                        </div>
-                    )}
+
+        <div className="Card-layout" style={{ display: "inline", flexWrap: "wrap" }}>
+            {groups.map(group =>
+                <div key={group.id}>
+                    <CharacterCard group={group}/>
                 </div>
-            </header>
+            )}
         </div>
     );
 };
 
-export default characterFetch;
+export default CharacterFetch;
