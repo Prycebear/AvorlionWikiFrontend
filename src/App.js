@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Navbar from "./Navbar/Navbar";
-import CharacterCard from "./Cards/Character/CharacterCard";
-import CharacterList from "./Pages/CharacterList";
+import Navbar from "./Components/NavBar/Navbar";
+
+import CharacterList from "./Components/CharacterList/CharacterList";
 
 function App() {
     return (
@@ -14,7 +14,6 @@ function App() {
             </header>
             <body>
 
-            <CharacterList></CharacterList>
             <CharacterList></CharacterList>
 
 

@@ -1,21 +1,38 @@
 import { useEffect, useState } from "react";
+import CharacterList from "../Components/CharacterList/CharacterList";
+import CharacterCard from "../Components/CharacterCards/CharacterCard";
 
 const useFetch = (url) => {
-    const [data, setdata] = useState(null);
-    const [loading, setloading] = useState(true);
-    const [error, seterror] = useState("");
+    const [groups, setGroups] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-                seterror(data.error)
-                setdata(data.firstName)
-                setloading(false)
-            })
-    }, [url]);
+        setLoading(true);
 
-    return { data, loading, error };
+        fetch("http://localhost:8080/character/all")
+            .then(response => response.json())
+            .then(data => {
+                setGroups(data);
+                setLoading(false);
+            })
+    }, []);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    return (
+        <div className="App">
+            <header className="App-header">
+                <div className="App-intro">
+                    {groups.map(group =>
+                        <div key={group.id}>
+                            <CharacterCard group ={group}/>
+                        </div>
+                    )}
+                </div>
+            </header>
+        </div>
+    );
 };
 
 export default useFetch;
