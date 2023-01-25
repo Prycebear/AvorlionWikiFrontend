@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import CharacterList from "../Components/CharacterList/CharacterList";
 import CharacterCard from "../Components/CharacterCards/CharacterCard";
 
-const useFetch = (url) => {
-    const [groups, setGroups] = useState([]);
+export function useFetch (url){
+    const [props, setProps] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setLoading(true);
 
-        fetch("http://localhost:8080/character/all")
+        fetch(url)
             .then(response => response.json())
             .then(data => {
-                setGroups(data);
+                setProps(data);
                 setLoading(false);
             })
     }, []);
@@ -20,19 +20,19 @@ const useFetch = (url) => {
     if (loading) {
         return <p>Loading...</p>;
     }
-    return (
-        <div className="App">
-            <header className="App-header">
-                <div className="App-intro">
-                    {groups.map(group =>
-                        <div key={group.id}>
-                            <CharacterCard group ={group}/>
-                        </div>
-                    )}
-                </div>
-            </header>
-        </div>
-    );
+    // return useFetch();
+    //     <div className="App">
+    //         <header className="App-header">
+    //             <div className="App-intro">
+    //                 {groups.map(group =>
+    //                     <div key={group.id}>
+    //                         <CharacterCard group ={group}/>
+    //                     </div>
+    //                 )}
+    //             </div>
+    //         </header>
+    //     </div>
+    // );
 };
 
 export default useFetch;
