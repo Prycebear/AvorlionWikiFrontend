@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./Components/NavBar/Navbar";
-import CharacterCard from "./Components/CharacterCards/CharacterCard";
-import {useEffect, useState} from "react";
+import Body, {CharacterCardBody} from "./Components/Body/Body/CharacterCardBody";
 
 
 function App() {
@@ -15,13 +14,7 @@ function App() {
                     <Navbar/>
 
                 </header>
-                <body>
-                    {groups.map(group =>
-                        <div key={group.id}>
-                            <CharacterCard groups={group}/>
-                        </div>
-                    )}
-                </body>
+                <CharacterCardBody/>
             </div>
         );
     }

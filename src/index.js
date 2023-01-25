@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CharacterCard from "./Components/CharacterCards/CharacterCard";
-import UseFetch from "./Hooks/UseFetch";
+import UseFetch from "./Hooks/CharacterFetch";
+import Body from "./Components/Body/Body/CharacterCardBody";
 
 
 

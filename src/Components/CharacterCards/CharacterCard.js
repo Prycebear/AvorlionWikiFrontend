@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import useFetch from "../../Hooks/UseFetch";
+import useFetch from "../../Hooks/CharacterFetch";
 
 import "./CharacterCard.css"
 
 
 
-export const CharacterCards = ({groups}) => {
+export const CharacterCards = ({group}) => {
 
 
     return (
@@ -13,15 +13,15 @@ export const CharacterCards = ({groups}) => {
             <img src="https://rare-gallery.com/uploads/posts/1190346-Kim-Sung-Hwan-drawing-men-Paladin-warrior-armor.jpg"/>
             <div id="card-interior">
 
-                <div className="CardContent" key={groups.id}>
-                    <h2 className="CharacterName">{groups.firstName}</h2>
-                    <h2 className="Nickname">{groups.nickname}</h2>
+                <div className="CardContent">
+                    <h2 className="CharacterName">{group.firstName}</h2>
+                    <h2 className="Nickname">{group.nickname}</h2>
                     <ul className="CharacterDetails">
-                        <li id="Job">{groups.role}</li>
+                        <li id="Race">{group.race}</li>
+                        <li id = "Role">{group.role}</li>
                     </ul>
-                    {/*<p id="description">{group.description}</p>*/}
-
-                </div>)}
+                    <p id = "desc">{group.description}</p>
+                </div>
             </div>
         </div>
     );
