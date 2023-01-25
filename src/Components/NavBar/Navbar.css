@@ -11,8 +11,6 @@
 
 .NavElement {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #333;
     display: flex;
@@ -26,7 +24,7 @@ li {
 li a {
     display: inline-block;
     color: white;
-    padding: 14px 30px;
+    padding: 14px 100px;
     text-decoration: none;
 
 }

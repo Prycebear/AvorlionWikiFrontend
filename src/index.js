@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CharacterCard from "./Cards/Character/CharacterCard";
-import CharacterList from "./Pages/CharacterList";
+import CharacterCard from "./Components/CharacterCards/CharacterCard";
+import UseFetch from "./Hooks/UseFetch";
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <UseFetch/>
   </React.StrictMode>
 );
 

@@ -1,6 +1,6 @@
-import useFetch from "../Hooks/UseFetch";
+import useFetch from "../../Hooks/UseFetch";
 import React from "react";
-import CharacterCard from "../Cards/Character/CharacterCard";
+import CharacterCard from "../CharacterCards/CharacterCard";
 
 import "./CharacterList.css"
 
