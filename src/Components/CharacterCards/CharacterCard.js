@@ -12,7 +12,7 @@ export const CharacterCard = () => {
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id}>
                         <img
-                            src={item.imglink}/>
+                            src="https://live.staticflickr.com/65535/52648490061_d4d627750f_b.jpg"/>
                         <div id="card-interior">
 
                             <div className="CardContent">
