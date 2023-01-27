@@ -7,12 +7,14 @@ export const CharacterCard = () => {
     const [data] = useFetch("http://localhost:8080/character/all")
 
     return (
-        <div>
+        <div className="CharacterWrap">
             {data &&
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id}>
+                        <div className="CharacterImage">
                         <img
-                            src="https://live.staticflickr.com/65535/52648490061_d4d627750f_b.jpg"/>
+                            src={item.imgLink}/>
+                        </div>
                         <div id="card-interior">
 
                             <div className="CardContent">
@@ -24,9 +26,14 @@ export const CharacterCard = () => {
                                 <p id="desc">{item.description}</p>
                             </div>
                         </div>
+                        <div className="CharacterCardBack">
+                        </div>
                     </div>
+
+
                 })}
         </div>
+
     )
 }
 

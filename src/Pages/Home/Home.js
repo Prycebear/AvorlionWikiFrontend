@@ -1,11 +1,15 @@
+import "./Home.css"
 
+export default function Home() {
 
-export default function Home(){
-
-    return(
+    return (
         <div className="Home">
-            <h1 className="Title">Welcome to the Avorion Wiki!</h1>
-            <p>Ill add more to this as time progresses!</p>
+            <div className="Title">
+                <h1 className="Title">Welcome to the Avorion Wiki!</h1>
+            </div>
+            <div className="Body">
+                <p>Ill add more to this as time progresses!</p>
+            </div>
 
         </div>
     )

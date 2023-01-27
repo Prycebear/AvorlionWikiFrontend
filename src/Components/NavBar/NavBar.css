@@ -1,0 +1,48 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap);
+}
+
+
+.nav{
+    text-align: center;
+}
+
+
+.NavElement {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+
+}
+
+li {
+}
+
+a {
+    display: inline-block;
+    color: white;
+    padding: 14px 100px;
+    text-decoration: none;
+
+}
+
+a:hover {
+    background-color: #111;
+}
+
+#Title{
+    padding: 1.5%;
+    font-family: myFirstFont;
+    font-size: 500%;
+    color: slategray;
+}
+
+#Title-Background{
+    background: url("https://live.staticflickr.com/65535/52651903662_992e765d5b_b.jpg") no-repeat ;
+    background-size: cover;
+}
+
+

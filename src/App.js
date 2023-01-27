@@ -1,22 +1,24 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/NavBar/Navbar";
 import CharacterCard from "./Components/CharacterCards/CharacterCard";
 import Home from "./Pages/Home/Home";
-import Layout from "./Layout/Layout";
+import Navbar from "./Components/NavBar/NavBar";
+import {CharacterPage} from "./Pages/Characters/CharacterPage";
+import {Maps} from "./Pages/Maps/Maps";
 
+
+function CharacterPageS() {
+    return null;
+}
 
 function App() {
-
-
-
         return (
             <BrowserRouter>
-                    <Navbar/>
                 <Routes>
-                    <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Navbar />}>
                         <Route index element={<Home />} />
-                        <Route path="character" element={<CharacterCard />} />
+                        <Route path="character" element={<CharacterPage />} />
+                        <Route path="maps" element={<Maps />} />
 
                     </Route>
                 </Routes>
