@@ -33,9 +33,10 @@ li a:hover {
     background-color: #111;
 }
 
-h1{
+#Title{
     padding: 1.5%;
     font-family: myFirstFont;
     font-size: 500%;
+    color: slategray;
 }
 

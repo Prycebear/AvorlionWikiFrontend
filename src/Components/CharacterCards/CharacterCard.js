@@ -1,30 +1,43 @@
 import React, {useEffect, useState} from "react";
-import useFetch from "../../Hooks/CharacterFetch";
-
 import "./CharacterCard.css"
+import useFetch from "../../Hooks/UseFetch";
 
 
-
-export const CharacterCards = ({group}) => {
-
+export const CharacterCard = () => {
+    const [data] = useFetch("http://localhost:8080/character/all")
 
     return (
-        <div className="CharacterCard">
-            <img src="https://rare-gallery.com/uploads/posts/1190346-Kim-Sung-Hwan-drawing-men-Paladin-warrior-armor.jpg"/>
-            <div id="card-interior">
+        <div>
+            {data &&
+                data.map((item) => {
+                    return <div className="CharacterCard" key={item.id}>
+                        <img
+                            src={item.imglink}/>
+                        <div id="card-interior">
 
-                <div className="CardContent">
-                    <h2 className="CharacterName">{group.firstName}</h2>
-                    <h2 className="Nickname">{group.nickname}</h2>
-                    <ul className="CharacterDetails">
-                        <li id="Race">{group.race}</li>
-                        <li id = "Role">{group.role}</li>
-                    </ul>
-                    <p id = "desc">{group.description}</p>
-                </div>
-            </div>
+                            <div className="CardContent">
+                                <h2 className="CharacterName">{item.firstName}</h2>
+                                <ul className="CharacterDetails">
+                                    <li id="Race"><h3>{item.race}</h3></li>
+                                    <li id="Role"><h3>{item.role}</h3></li>
+                                </ul>
+                                <p id="desc">{item.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                })}
         </div>
-    );
-};
+    )
+}
 
-export default CharacterCards;
+
+//     {data &&
+//     data.map((item) => {
+//         return <p key={item.id}>{item.title}</p>;
+//     })}
+// </>
+// );
+// };
+
+
+    export default CharacterCard;
