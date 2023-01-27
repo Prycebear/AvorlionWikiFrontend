@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/NavBar/Navbar";
-import Body, {CharacterCardBody} from "./Components/Body/Body/CharacterCardBody";
+import CharacterCard from "./Components/CharacterCards/CharacterCard";
+import Home from "./Pages/Home/Home";
 
 
 function App() {
@@ -12,9 +13,8 @@ function App() {
             <div className="App">
                 <header className="App-header">
                     <Navbar/>
-
                 </header>
-                <CharacterCardBody/>
+                <footer/>
             </div>
         );
     }
