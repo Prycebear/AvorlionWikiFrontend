@@ -1,0 +1,23 @@
+.Home{
+    background-color: dimgrey;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 3rem;
+    min-height: 100%;
+    margin-bottom: 0px;
+    position:absolute;
+
+}
+
+.title{
+
+}
+
+.Body{
+    padding: 2rem;
+    min-height: 100%;
+
+}
