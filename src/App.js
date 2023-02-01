@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import Navbar from "./Components/NavBar/NavBar";
 import {CharacterPage} from "./Pages/Characters/CharacterPage";
 import {Maps} from "./Pages/Maps/Maps";
+import DetailCharacter from "./Components/DetailCards/DetailCharacter/DetailCharacter";
 
 
 function CharacterPageS() {
@@ -19,6 +20,7 @@ function App() {
                         <Route index element={<Home />} />
                         <Route path="character" element={<CharacterPage />} />
                         <Route path="maps" element={<Maps />} />
+                        <Route path="character/1" element={<DetailCharacter />} />
 
                     </Route>
                 </Routes>
