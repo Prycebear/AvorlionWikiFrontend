@@ -1,16 +1,13 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CharacterCard from "./Components/CharacterCards/CharacterCard";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Components/NavBar/NavBar";
-import {CharacterPage} from "./Pages/Characters/CharacterPage";
+import {CardBackground} from "./Pages/Background/CardBackground";
 import {Maps} from "./Pages/Maps/Maps";
-import DetailCharacter from "./Components/DetailCards/DetailCharacter/DetailCharacter";
+import {MainPost} from "./Pages/PostPage/MainPostPage/MainPost";
+import GodCard from "./Components/Cards/GodCards/GodCard";
 
 
-function CharacterPageS() {
-    return null;
-}
 
 function App() {
         return (
@@ -18,9 +15,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Navbar />}>
                         <Route index element={<Home />} />
-                        <Route path="character" element={<CharacterPage />} />
+                        <Route path="character" element={<CardBackground />} />
+                        <Route path="gods" element={<GodCard />} />
                         <Route path="maps" element={<Maps />} />
-                        <Route path="character/1" element={<DetailCharacter />} />
+                        <Route path="add" element={<MainPost />} />
 
                     </Route>
                 </Routes>

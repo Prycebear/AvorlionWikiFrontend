@@ -1,0 +1,49 @@
+.GodWrap{
+    text-align: center;
+}
+
+.GodCard{
+    background: darkslategray;
+    border: slategray solid;
+    margin: 2rem;
+    width: 18%;
+    border-radius: 7%;
+    display: inline-block;
+    text-align: center;
+    transition: all 2s;
+}
+
+.GodImage{
+    max-height: 70%;
+
+}
+
+img{
+    max-width: 100%;
+    border-radius: 8% 8% 0% 0%;
+    object-fit: fill;
+    height: auto;
+
+}
+
+.CardContent{
+    margin: 3%;
+    overflow: auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+.GodCard:hover{
+
+    transform: scale(140%);
+    box-shadow:
+    0 0 60px 30px goldenrod,  /* inner white */
+    0 0 100px 60px gold, /* middle magenta */
+    0 0 140px 90px white; /* outer cyan */
+}
+
+.CharacterCardBack{
+    background-color: #333333;
+}

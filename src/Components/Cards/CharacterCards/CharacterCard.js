@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
-import "./DetailCharacter.css"
+import "./CharacterCard.css"
 import useFetch from "../../../Hooks/UseFetch";
 
 
-
-export const DetailCharacter = () => {
-    const [data] = useFetch("http://localhost:8080/character/1")
+export const CharacterCard = () => {
+    const [data] = useFetch("http://localhost:8080/character/all")
 
     return (
         <div className="CharacterWrap">
@@ -13,8 +12,8 @@ export const DetailCharacter = () => {
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id}>
                         <div className="CharacterImage">
-                            <img
-                                src={item.imgLink}/>
+                        <img
+                            src={item.imgLink}/>
                         </div>
                         <div id="card-interior">
 
@@ -39,6 +38,13 @@ export const DetailCharacter = () => {
 }
 
 
+//     {data &&
+//     data.map((item) => {
+//         return <p key={item.id}>{item.title}</p>;
+//     })}
+// </>
+// );
+// };
 
 
-export default DetailCharacter;
+    export default CharacterCard;
