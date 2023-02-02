@@ -1,0 +1,44 @@
+.CharacterPost{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+label{
+    color: gold;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid silver;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea{
+    border: none;
+    border-bottom: 2px solid silver;
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 500px;
+}
+select{
+    border: none;
+    border-bottom: 2px solid silver;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

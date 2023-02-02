@@ -13,8 +13,9 @@ export default function Navbar() {
                 <ul className="NavElement">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/character">Character</Link></li>
+                    <li><Link to="/gods">Gods</Link></li>
                     <li><Link to="/maps">Maps</Link></li>
-                    <li><Link to="/character/1">Character</Link></li>
+                    <li><Link to="/add">Add</Link></li>
                 </ul>
             </div>
         </nav>
