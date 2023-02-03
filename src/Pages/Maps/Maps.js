@@ -1,3 +1,5 @@
+import "./Maps.css";
+
 
 export const Maps = () => {
 

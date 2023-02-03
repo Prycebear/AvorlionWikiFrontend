@@ -7,6 +7,7 @@ import {Maps} from "./Pages/Maps/Maps";
 import {MainPost} from "./Pages/PostPage/MainPostPage/MainPost";
 import GodCard from "./Components/Cards/GodCards/GodCard";
 import {GodCardBackground} from "./Pages/Background/GodCards/GodCardBackground";
+import DetailCharacter from "./Components/Cards/DetailCards/DetailCharacter/DetailCharacter";
 
 
 
@@ -18,7 +19,7 @@ function App() {
                         <Route index element={<Home />} />
                         <Route path="character" element={<CardBackground />} />
                         <Route path="gods" element={<GodCardBackground />} />
-                        <Route path="maps" element={<Maps />} />
+                        <Route path="maps" element={<DetailCharacter />} />
                         <Route path="add" element={<MainPost />} />
 
                     </Route>

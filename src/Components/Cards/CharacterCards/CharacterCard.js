@@ -31,8 +31,6 @@ export const CharacterCard = () => {
                                 <p id="desc">{item.description}</p>
                             </div>
                         </div>
-                        <div className="CharacterCardBack">
-                        </div>
                     </div>
 
 
@@ -43,13 +41,6 @@ export const CharacterCard = () => {
 }
 
 
-//     {data &&
-//     data.map((item) => {
-//         return <p key={item.id}>{item.title}</p>;
-//     })}
-// </>
-// );
-// };
 
 
     export default CharacterCard;
