@@ -13,12 +13,17 @@ export const CharacterCard = () => {
                     return <div className="CharacterCard" key={item.id}>
                         <div className="CharacterImage">
                         <img
-                            src={item.imgLink}/>
+                            src={item.imgLink}
+                            onError={({ currentTarget }) => {
+                                currentTarget.onerror = null; // prevents looping
+                                currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
+                            }}
+                        />
                         </div>
                         <div id="card-interior">
 
                             <div className="CardContent">
-                                <h2 className="CharacterName">{item.firstName}</h2>
+                                <h3 className="CharacterName">{item.firstName}</h3>
                                 <ul className="CharacterDetails">
                                     <li id="Race"><h3>{item.race}</h3></li>
                                     <li id="Role"><h3>{item.role}</h3></li>

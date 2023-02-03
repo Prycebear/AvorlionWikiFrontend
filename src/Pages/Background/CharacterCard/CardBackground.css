@@ -1,4 +1,5 @@
 .Card-Background{
     background-color: dimgrey;
-    padding: 4rem;
+    padding: 3px;
+    background-size: cover;
 }
