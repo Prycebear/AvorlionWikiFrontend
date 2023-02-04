@@ -10,12 +10,12 @@ export const CharacterCard = () => {
         <div className="CharacterWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="CharacterCard" key={item.id}>
+                    return <div className="CharacterCard" key={item.id} onClick={() => alert("Hello!")}>
                         <div className="CharacterImage">
                         <img
                             src={item.imgLink}
                             onError={({ currentTarget }) => {
-                                currentTarget.onerror = null; // prevents looping
+                                currentTarget.onerror = null;
                                 currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
                             }}
                         />
