@@ -18,10 +18,10 @@ function App() {
                     <Route path="/" element={<Navbar />}>
                         <Route index element={<Home />} />
                         <Route path="character" element={<CardBackground />} />
+                        <Route path="character/:id" element={<DetailCharacter/>}/>
                         <Route path="gods" element={<GodCardBackground />} />
                         <Route path="maps" element={<DetailCharacter />} />
                         <Route path="add" element={<MainPost />} />
-
                     </Route>
                 </Routes>
             </BrowserRouter>

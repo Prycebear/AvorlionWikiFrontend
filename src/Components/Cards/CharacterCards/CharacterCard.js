@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./CharacterCard.css"
 import useFetch from "../../../Hooks/UseFetch";
+import {Link} from "react-router-dom";
 
 
 export const CharacterCard = () => {
@@ -10,7 +11,8 @@ export const CharacterCard = () => {
         <div className="CharacterWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="CharacterCard" key={item.id} onClick={() => alert("Hello!")}>
+                    return <div className="CharacterCard" key={item.id}>
+                        {/*<Link to={{pathname: `/character/${item.id}`}} className="btn btn-primary"></Link>*/}
                         <div className="CharacterImage">
                         <img
                             src={item.imgLink}

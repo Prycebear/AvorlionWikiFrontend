@@ -1,10 +1,12 @@
 import React from "react";
 import "./DetailCharacter.css"
 import useFetch from "../../../../Hooks/UseFetch";
+import {useParams} from "react-router-dom";
 
 
 export const DetailCharacter = () => {
-    const [data] = useFetch("http://localhost:8080/character/6")
+    const {id} = useParams()
+    const [data] = useFetch(`http://localhost:8080/character/${id}`)
 
     return (
         <div className="DetailCharacter" key={data.id}>
