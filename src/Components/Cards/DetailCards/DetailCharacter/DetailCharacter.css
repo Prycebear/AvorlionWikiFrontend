@@ -1,48 +1,31 @@
-.CharacterWrap{
+.DetailCharacter{
+    text-align: center;
+    padding: 5px;
+    background-color: dimgray;
+}
+
+.DataMain{
+    display: inline-flex;
+}
+
+
+
+.DetailPicture{
+    max-width: 100px;
+    max-width: 100px;
+    border-radius: 0;
+
+
+}
+
+.CharacterDescription{
+    width: 70%;
     text-align: center;
 }
 
-.CharacterCard{
-    background: darkslategray;
-    border: slategray solid;
-    margin: 2rem;
-    width: 18%;
-    border-radius: 7%;
-    display: inline-block;
-    text-align: center;
-    transition: all 2s;
-}
-
-.CharacterImage{
-    max-height: 70%;
-
-}
-
-img{
-    max-width: 100%;
-    border-radius: 8% 8% 0% 0%;
-    object-fit: fill;
-    height: auto;
-
-}
-
-.CardContent{
-    margin: 3%;
-}
-
-li{
-    list-style-type: none;
-}
-
-.CharacterCard:hover{
-
-    transform: scale(140%);
-    box-shadow:
-            0 0 60px 30px #fff,  /* inner white */
-            0 0 100px 60px #f0f, /* middle magenta */
-            0 0 140px 90px #0ff; /* outer cyan */
-}
-
-.CharacterCardBack{
-    background-color: #333333;
+.SideBarInfoCharacterDetails{
+    border: magenta solid;
+    max-width: 20%;
+    float: right;
+    margin-right: 1px;
 }

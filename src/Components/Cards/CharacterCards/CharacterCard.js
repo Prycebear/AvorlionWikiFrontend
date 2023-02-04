@@ -28,7 +28,7 @@ export const CharacterCard = () => {
                                     <li id="Race"><h3>{item.race}</h3></li>
                                     <li id="Role"><h3>{item.role}</h3></li>
                                 </ul>
-                                <p id="desc">{item.description}</p>
+                                <p id="desc">{item.shortDescription}</p>
                             </div>
                         </div>
                     </div>
