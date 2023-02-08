@@ -76,6 +76,12 @@ export const CharacterPost = () => {
                     <option value="Deep-Gnome">Deep-Gnome</option>
                     <option value="Orc">Orc</option>
                     <option value="Half-Orc">Half-Orc</option>
+                    <option value="Drow">Drow</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Triton">Triton</option>
+                    <option value="Changeling">Changeling</option>
+
+
                 </select>
                 <label>Class:</label>
                 <br/>
@@ -90,6 +96,7 @@ export const CharacterPost = () => {
                     <option value="Sorcerer">Sorcerer</option>
                     <option value="Warlock">Warlock</option>
                     <option value="Bard">Bard</option>
+                    <option value="">None</option>
                 </select>
                 <label>Description:</label>
                 <br/>

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./CharacterCard.css"
 import useFetch from "../../../Hooks/UseFetch";
+import {Link} from "react-router-dom";
 
 
 export const CharacterCard = () => {
@@ -11,11 +12,12 @@ export const CharacterCard = () => {
             {data &&
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id}>
+                        {/*<Link to={{pathname: `/character/${item.id}`}} className="btn btn-primary"></Link>*/}
                         <div className="CharacterImage">
                         <img
                             src={item.imgLink}
                             onError={({ currentTarget }) => {
-                                currentTarget.onerror = null; // prevents looping
+                                currentTarget.onerror = null;
                                 currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
                             }}
                         />
@@ -28,7 +30,7 @@ export const CharacterCard = () => {
                                     <li id="Race"><h3>{item.race}</h3></li>
                                     <li id="Role"><h3>{item.role}</h3></li>
                                 </ul>
-                                <p id="desc">{item.description}</p>
+                                <p id="desc">{item.shortDescription}</p>
                             </div>
                         </div>
                     </div>
