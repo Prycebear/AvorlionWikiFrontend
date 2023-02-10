@@ -25,7 +25,7 @@ export const CharacterCard = () => {
                         <div id="card-interior">
 
                             <div className="CardContent">
-                                <h3 className="CharacterName">{item.firstName}</h3>
+                                <h3 className="CharacterName">{item.firstName} {item.lastName}</h3>
                                 <ul className="CharacterDetails">
                                     <li id="Race"><h3>{item.race}</h3></li>
                                     <li id="Role"><h3>{item.role}</h3></li>
