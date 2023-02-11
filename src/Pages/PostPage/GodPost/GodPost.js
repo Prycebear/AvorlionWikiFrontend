@@ -17,11 +17,13 @@ export const GodPost = () => {
                 <label>Type:</label>
                 <input type="text" id="type" name="type"/>
                 <br/>
+                <label>Short Description:</label>
+                <input type = "text" id = "shortdescription" name = "shortdescription"/>
                 <label>Description:</label>
                 <input type="text" id="description" name="description"/>
                 <br/>
-                <label>Piety:</label>
-                <input type="text" id="piety" name="piety"/>
+                <label>Role:</label>
+                <input type="text" id="role" name="role"/>
                 <br/>
                 <label>History:</label>
                 <input type="text" id="history" name="history"/>
