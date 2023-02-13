@@ -126,7 +126,6 @@ export const CharacterPost = () => {
                 <label>Image link:</label>
                 <input type="text" id="image" name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
 
-
                 <button type="submit">Submit</button>
             </form>
         </div>)
