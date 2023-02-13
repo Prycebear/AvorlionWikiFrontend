@@ -10,6 +10,10 @@ export const GodPost = () => {
     const [shortDescription, setShortDescription] = useState("");
     const [description, setDescription] = useState("");
     const [history, setHistory] = useState("");
+    const [goals, setGoals] = useState("");
+    const [myths, setMyths] = useState("");
+    const [churchStructure, setChurchStructure] = useState("");
+    const [divineRelationship, setDivineRelationship] = useState("");
 
     let handleGodSubmit = async (e) => {
         e.preventDefault();
@@ -27,6 +31,11 @@ export const GodPost = () => {
                     history: history,
                     description: description,
                     role: role,
+                    goals: goals,
+                    myths: myths,
+                    churchStructure: churchStructure,
+                    divineRelationship: divineRelationship
+
                 }),
             });
             //let resJson = await res;
@@ -38,6 +47,10 @@ export const GodPost = () => {
                 setShortDescription("");
                 setDescription("");
                 setHistory("");
+                setGoals("");
+                setMyths("");
+                setChurchStructure("");
+                setDivineRelationship("");
             } else {
                 console.log(res);
             }
@@ -78,6 +91,22 @@ export const GodPost = () => {
                 <label>History:</label>
                 <input type="text" id="history" name="history" value={history}
                        onChange={(e) => setHistory(e.target.value)}/>
+                <br/>
+                <label>Goals:</label>
+                <input type="text" id="goals" name="goals" value={goals}
+                       onChange={(e) => setGoals(e.target.value)}/>
+                <br/>
+                <label>Myths:</label>
+                <input type="text" id="myths" name="myths" value={myths}
+                       onChange={(e) => setMyths(e.target.value)}/>
+                <br/>
+                <label>Church Structure:</label>
+                <input type="text" id="history" name="history" value={history}
+                       onChange={(e) => setChurchStructure(e.target.value)}/>
+                <br/>
+                <label>Divine Relationships:</label>
+                <input type="text" id="divinerelationship" name="divinerelationship" value={divineRelationship}
+                       onChange={(e) => setDivineRelationship(e.target.value)}/>
 
                 <button type="submit">Submit</button>
             </form>
