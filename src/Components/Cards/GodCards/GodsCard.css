@@ -1,4 +1,28 @@
+.GodWrap{
+    text-align: center;
+}
 
+.GodCard{
+    background: silver;
+    border: gold solid;
+    margin: 1.2rem;
+    width: 18%;
+    height: 150px;
+    max-height: 100%;
+    border-radius: 7%;
+    display: inline-block;
+    text-align: center;
+    transition: all 1.2s;
+}
+
+.GodCardContent{
+    margin: 3%;
+    justify-content: center;
+}
+
+#card-interior{
+    align-content: center;
+}
 
 .GodCard:hover{
 
@@ -7,8 +31,4 @@
     0 0 60px 30px white,  /* inner white */
     0 0 100px 60px gold, /* middle magenta */
     0 0 140px 90px goldenrod; /* outer cyan */
-}
-
-.CharacterCardBack{
-    background-color: #333333;
 }

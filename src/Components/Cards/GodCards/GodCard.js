@@ -12,17 +12,12 @@ export const GodCard = () => {
                 data.map((item) => {
                     return <div className="GodCard" key={item.id}>
                         <div id="card-interior">
-
-                            <div className="CardContent">
+                            <div className="GodCardContent">
                                 <h2 className="GodName">{item.name}</h2>
-                                <ul className="GodDetails">
-                                    <li id="domain"><h3>of the {item.domain}</h3></li>
-                                    <li id="type"><h3>{item.type} God</h3></li>
-                                </ul>
-                                <p id="desc">{item.description}</p>
+                                    <p id="domain"><h3>of the {item.domain}</h3></p>
+                                    <p id="type"><h3>{item.type} God</h3></p>
+                                <p id="desc">{item.shortDescription}</p>
                             </div>
-                        </div>
-                        <div className="CharacterCardBack">
                         </div>
                     </div>
 
@@ -43,4 +38,4 @@ export const GodCard = () => {
 // };
 
 
-    export default GodCard;
+export default GodCard;
