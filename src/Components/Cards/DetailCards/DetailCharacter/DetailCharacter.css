@@ -11,21 +11,24 @@
 
 
 .DetailPicture{
-    max-width: 100px;
-    max-width: 100px;
-    border-radius: 0;
-
-
+ border-radius: 3%;
 }
 
 .CharacterDescription{
-    width: 70%;
-    text-align: center;
+    font-size: 200px;
+
+}
+
+.DetailDesc{
+    font-size: 20px;
 }
 
 .SideBarInfoCharacterDetails{
-    border: magenta solid;
-    max-width: 20%;
     float: right;
-    margin-right: 1px;
+    margin-left: 5%;
+    background-color: #333333;
+    border-radius: 3%;
+    width: 25%;
+    list-style: none;
+
 }
