@@ -19,10 +19,16 @@
 
 }
 
+.DetailDesc{
+    font-size: 20px;
+}
+
 .SideBarInfoCharacterDetails{
     float: right;
     margin-left: 5%;
     background-color: #333333;
     border-radius: 3%;
+    width: 25%;
+    list-style: none;
 
 }
