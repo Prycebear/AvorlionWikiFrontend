@@ -28,7 +28,6 @@ export const CharacterCard = () => {
                                 <h3 className="CharacterName">{item.firstName} {item.surname}</h3>
                                 <ul className="CharacterDetails">
                                     <li id="Race"><h3>{item.race}</h3></li>
-                                    <li id="Role"><h3>{item.role}</h3></li>
                                 </ul>
                                 <p id="desc">{item.shortDescription}</p>
                             </div>
