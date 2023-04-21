@@ -5,7 +5,8 @@ import {Link} from "react-router-dom";
 
 
 export const CharacterCard = () => {
-    const [data] = useFetch("http://localhost:8080/character/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/character/all")
+
 
     return (
         <div className="CharacterWrap">

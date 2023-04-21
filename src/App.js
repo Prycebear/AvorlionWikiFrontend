@@ -10,7 +10,8 @@ import {GodCardBackground} from "./Pages/Background/GodCards/GodCardBackground";
 import DetailCharacter from "./Components/Cards/DetailCards/DetailCharacter/DetailCharacter";
 
 
-
+const develop = "http://localhost:8080/character/all";
+const prod = "https://avorlionbackend.herokuapp.com/character/all";
 function App() {
         return (
             <BrowserRouter>
