@@ -17,7 +17,7 @@ export const CharacterPost = () => {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch("https://avorlionwiki.herokuapp.com/character/add", {
+            let res = await fetch("https://avorlionbackend.herokuapp.com/character/add", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
