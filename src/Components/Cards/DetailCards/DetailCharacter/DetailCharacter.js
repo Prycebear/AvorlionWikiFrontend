@@ -6,7 +6,7 @@ import {useParams} from "react-router-dom";
 
 export const DetailCharacter = () => {
     const {id} = useParams()
-    const [data] = useFetch(`http://localhost:8080/character/${id}`)
+    const [data] = useFetch(`https://avorlionbackend.herokuapp.com/character/${id}`)
 
     return (
         <div className="DetailCharacter" key={data.id}>
