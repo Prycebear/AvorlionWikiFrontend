@@ -9,7 +9,7 @@ export default function Home() {
             </div>
             <div className="Body">
                 <p>Ill add more to this as time progresses!</p>
-                <img src="src/Images/Maps/Keolon.png" alt="This is meant to load but that a problem for another day"/>
+                <img src={require('src/Images/Maps/Keolon.png')} alt="This is meant to load but that a problem for another day"/>
             </div>
 
         </div>
