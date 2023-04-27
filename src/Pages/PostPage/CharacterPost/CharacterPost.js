@@ -16,6 +16,7 @@ export const CharacterPost = () => {
 
     let handleSubmit = async (e) => {
         e.preventDefault();
+        return alert("New character succesfully added broski!")
         try {
             let res = await fetch("https://avorlionbackend.herokuapp.com/character/add", {
                 method: "POST",
@@ -94,6 +95,8 @@ export const CharacterPost = () => {
                     <option value="Dragon">Dragon</option>
                     <option value="Triton">Triton</option>
                     <option value="Changeling">Changeling</option>
+                    <option value="Grung">Grung</option>
+                    <option value="Goblin">Goblin</option>
                 </select>
                 <label>Class:</label>
                 <br/>
