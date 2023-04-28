@@ -1,6 +1,6 @@
 import "./Home.css"
 
-import logo from "src/Pages/Home/Keolon.png"
+import logo from "Keolon.png"
 
 export default function Home() {
 
