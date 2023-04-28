@@ -16,7 +16,7 @@ export const CharacterPost = () => {
 
     let handleSubmit = async (e) => {
         e.preventDefault();
-        return alert("New character succesfully added broski!")
+
         try {
             let res = await fetch("https://avorlionbackend.herokuapp.com/character/add", {
                 method: "POST",
@@ -53,7 +53,9 @@ export const CharacterPost = () => {
             }
         } catch (err) {
             console.log(err);
+            return alert("Nah, no beuno on the posterino")
         }
+        return alert("New character succesfully added broski!")
     };
 
 
@@ -132,6 +134,8 @@ export const CharacterPost = () => {
                 <button type="submit">Submit</button>
             </form>
         </div>)
+
+
 }
 
 
