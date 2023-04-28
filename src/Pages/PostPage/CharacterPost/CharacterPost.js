@@ -113,6 +113,7 @@ export const CharacterPost = () => {
                     <option value="Sorcerer">Sorcerer</option>
                     <option value="Warlock">Warlock</option>
                     <option value="Bard">Bard</option>
+                    <option value="Monk">Monk</option>
                     <option value="">None</option>
                 </select>
                 <label>Short Description:</label>
