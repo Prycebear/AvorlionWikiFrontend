@@ -18,7 +18,7 @@ export const GodPost = () => {
     let handleGodSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch("http://localhost:8080/gods/add", {
+            let res = await fetch("https://avorlionbackend.herokuapp.com/gods/add", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,10 +53,13 @@ export const GodPost = () => {
                 setDivineRelationship("");
             } else {
                 console.log(res);
+                return alert("Nah, no beuno on the posterino")
             }
         } catch (err) {
             console.log(err);
+            return alert("Nah, no beuno on the posterino")
         }
+        return alert("New character succesfully added broski!")
     };
 
 
@@ -74,8 +77,14 @@ export const GodPost = () => {
                        onChange={(e) => setDomain(e.target.value)}/>
                 <br/>
                 <label>Type:</label>
-                <input type="text" id="type" name="type" value={type}
-                       onChange={(e) => setType(e.target.value)}/>
+                <br/>
+                <select value={type} onChange={(e) => setType(e.target.value)}>
+                    <option value="Greater Deity">Greater Deity</option>
+                    <option value="Deity">Deity</option>
+                    <option value="Lesser Deity">Lesser Deity</option>
+                    <option value="Demigods">Demigods</option>
+                    <option value="Hall of Heroes">Hall of Heroes</option>
+                </select>
                 <br/>
                 <label>Short Description:</label>
                 <input type = "text" id = "shortdescription" name = "shortdescription" value={shortDescription}
