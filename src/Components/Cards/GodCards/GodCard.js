@@ -4,7 +4,7 @@ import useFetch from "../../../Hooks/UseFetch";
 
 
 export const GodCard = () => {
-    const [data] = useFetch("http://localhost:8080/gods/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/gods/all")
 
     return (
         <div className="GodWrap">
