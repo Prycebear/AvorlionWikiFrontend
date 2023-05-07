@@ -17,7 +17,7 @@ export const MainPost = () => {
             <div className="PostButtons">
                 <button onClick={() => setPost('character')}>Character</button>
                 <button onClick={() => setPost('god')}>God</button>
-                <button onClick={() => setPost('Continent')}>Continent</button>
+                <button onClick={() => setPost('continent')}>Continent</button>
                 <button onClick={() => setPost('nation')}>Nation</button>
                 <button onClick={() => setPost('city')}>City</button>
                 <button onClick={() => setPost('history')}>History</button>
@@ -31,7 +31,7 @@ export const MainPost = () => {
                     <GodPost/>
                 )}
 
-                {post === 'Continent' && (
+                {post === 'continent' && (
                     <ContinentPost/>
                 )}
 
