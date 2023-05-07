@@ -63,7 +63,8 @@ export const NationPost = () => {
                           onChange={(e) => setDescription(e.target.value)}/>
                 <br/>
                 <select type="text" id="continent" name="continent" value={continent}
-                                   onChange={(e) => setContinent(e.target.value)}>{
+                                   onChange={(e) => setContinent(e.target.value)}>
+                    <option value="None">None</option>{
                     this.state.values.map((data) => {
                         return <option value={data.id}>{data.name}</option>
                     })
