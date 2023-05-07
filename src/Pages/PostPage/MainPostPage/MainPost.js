@@ -31,7 +31,7 @@ export const MainPost = () => {
                     <GodPost/>
                 )}
 
-                {post === 'map' && (
+                {post === 'Continent' && (
                     <ContinentPost/>
                 )}
 
