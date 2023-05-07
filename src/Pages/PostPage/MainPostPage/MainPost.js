@@ -4,7 +4,8 @@ import CharacterCard from "../../../Components/Cards/CharacterCards/CharacterCar
 import {Maps} from "../../Maps/Maps";
 import {CharacterPost} from "../CharacterPost/CharacterPost";
 import {GodPost} from "../GodPost/GodPost";
-import {ContinentPost} from "../ContinentPost/ContinentPost";
+import {ContinentPost} from "../LocationPost/ContinentPost";
+import {NationPost} from "../LocationPost/NationPost";
 
 
 export const MainPost = () => {
@@ -33,6 +34,10 @@ export const MainPost = () => {
 
                 {post === 'continent' && (
                     <ContinentPost/>
+                )}
+
+                {post === 'nation' && (
+                    <NationPost/>
                 )}
 
             </div>
