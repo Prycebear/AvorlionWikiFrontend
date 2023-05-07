@@ -62,7 +62,8 @@ export const NationPost = () => {
                 <textarea type="text" id="description" name="description" value={description}
                           onChange={(e) => setDescription(e.target.value)}/>
                 <br/>
-                <select>{
+                <select type="text" id="continent" name="continent" value={continent}
+                                   onChange={(e) => setContinent(e.target.value)}>{
                     this.state.values.map((data) => {
                         return <option value={data.id}>{data.name}</option>
                     })
