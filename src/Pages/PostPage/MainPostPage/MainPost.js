@@ -4,6 +4,7 @@ import CharacterCard from "../../../Components/Cards/CharacterCards/CharacterCar
 import {Maps} from "../../Maps/Maps";
 import {CharacterPost} from "../CharacterPost/CharacterPost";
 import {GodPost} from "../GodPost/GodPost";
+import {ContinentPost} from "../ContinentPost/ContinentPost";
 
 
 export const MainPost = () => {
@@ -16,7 +17,7 @@ export const MainPost = () => {
             <div className="PostButtons">
                 <button onClick={() => setPost('character')}>Character</button>
                 <button onClick={() => setPost('god')}>God</button>
-                <button onClick={() => setPost('map')}>Map</button>
+                <button onClick={() => setPost('Continent')}>Continent</button>
                 <button onClick={() => setPost('nation')}>Nation</button>
                 <button onClick={() => setPost('city')}>City</button>
                 <button onClick={() => setPost('history')}>History</button>
@@ -31,8 +32,9 @@ export const MainPost = () => {
                 )}
 
                 {post === 'map' && (
-                    <Maps/>
+                    <ContinentPost/>
                 )}
+
             </div>
             </div>
         </div>
