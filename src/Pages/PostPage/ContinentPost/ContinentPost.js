@@ -39,7 +39,7 @@ export const ContinentPost = () => {
 
 
     return (
-        <div className="CharacterPost">
+        <div className="ContinentPost">
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
                 <input type="text" id="name" name="name" value={name}
