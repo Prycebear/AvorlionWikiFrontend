@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./CharacterPost.css"
+
 
 
 export const ContinentPost = () => {
