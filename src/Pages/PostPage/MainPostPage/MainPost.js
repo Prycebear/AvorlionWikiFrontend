@@ -6,6 +6,8 @@ import {CharacterPost} from "../CharacterPost/CharacterPost";
 import {GodPost} from "../GodPost/GodPost";
 import {ContinentPost} from "../LocationPost/ContinentPost";
 import {NationPost} from "../LocationPost/NationPost";
+import {SubNationPost} from "../LocationPost/SubNationPost";
+import {LocationPost} from "../LocationPost/Location";
 
 
 export const MainPost = () => {
@@ -21,7 +23,7 @@ export const MainPost = () => {
                 <button onClick={() => setPost('continent')}>Continent</button>
                 <button onClick={() => setPost('nation')}>Nation</button>
                 <button onClick={() => setPost('subnation')}>SubNation</button>
-                <button onClick={() => setPost('history')}>History</button>
+                <button onClick={() => setPost('location')}>Location</button>
             </div>
             <div className="PostForm">
                 {post === 'character' && (
@@ -41,7 +43,11 @@ export const MainPost = () => {
                 )}
 
                 {post === 'subnation' && (
-                    <SubNation/>
+                    <SubNationPost/>
+                )}
+
+                {post === 'location' && (
+                    <LocationPost/>
                 )}
 
             </div>
