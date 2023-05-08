@@ -64,11 +64,12 @@ export const NationPost = () => {
                 <br/>
                 <select type="text" id="continent" name="continent" value={continent}
                                    onChange={(e) => setContinent(e.target.value)}>
-                    <option value="None">None</option>{
-                    this.state.values.map((data) => {
-                        return <option value={data.id}>{data.name}</option>
-                    })
-                }</select>
+                    {data &&
+                        data.map((item) => {
+                        return <option value = {item.id}>{item.name}</option>
+                    })}
+                    <option value="none">None</option>
+                </select>
                 <label>Image link:</label>
                 <input type="text" id="image" name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
 
