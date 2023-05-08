@@ -9,7 +9,7 @@ export const LocationPost = () => {
     const [image, setImage] = useState("");
     const [history, setHistory] = useState("");
     const [leader, setLeader] = useState("");
-    const [nation, setNation] = useState("");
+    const [subNation, setSubNation] = useState("");
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ export const LocationPost = () => {
                     image: image,
                     history: history,
                     leader: leader,
-                    nation: nation,
+                    subNation: subNation,
                 }),
             });
             //let resJson = await res;
@@ -35,7 +35,7 @@ export const LocationPost = () => {
                 setDescription("");
                 setImage("");
                 setHistory("");
-                setNation("");
+                setSubNation("");
                 setLeader("");
             } else {
                 console.log(res);
@@ -62,8 +62,8 @@ export const LocationPost = () => {
                 <textarea type="text" id="description" name="description" value={description}
                           onChange={(e) => setDescription(e.target.value)}/>
                 <br/>
-                <select type="text" id="location" name="location" value={location}
-                        onChange={(e) => setNation(e.target.value)}>
+                <select type="text" id="subNation" name="subNation" value={subNation}
+                        onChange={(e) => setSubNation(e.target.value)}>
                     {data &&
                         data.map((item) => {
                             return <option value = {item.id}>{item.name}</option>
