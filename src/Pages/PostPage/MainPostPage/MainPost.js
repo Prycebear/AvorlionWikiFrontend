@@ -20,7 +20,7 @@ export const MainPost = () => {
                 <button onClick={() => setPost('god')}>God</button>
                 <button onClick={() => setPost('continent')}>Continent</button>
                 <button onClick={() => setPost('nation')}>Nation</button>
-                <button onClick={() => setPost('city')}>City</button>
+                <button onClick={() => setPost('subnation')}>SubNation</button>
                 <button onClick={() => setPost('history')}>History</button>
             </div>
             <div className="PostForm">
@@ -38,6 +38,10 @@ export const MainPost = () => {
 
                 {post === 'nation' && (
                     <NationPost/>
+                )}
+
+                {post === 'subnation' && (
+                    <SubNation/>
                 )}
 
             </div>
