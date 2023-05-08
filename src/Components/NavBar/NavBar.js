@@ -4,7 +4,6 @@ import {Link, Outlet} from "react-router-dom";
 export default function Navbar() {
 
 
-
     return (
 
     <>
@@ -15,7 +14,6 @@ export default function Navbar() {
                 </div>
                 <ul className="NavElement">
                     <li><Link to="/">Home</Link></li>
-                    <li><button onClick={handleOpen}>Wiki</button></li>
                     <li><Link to="/character">Character</Link></li>
                     <li><Link to="/gods">Gods</Link></li>
                     <li><Link to="/maps">Locations</Link></li>
