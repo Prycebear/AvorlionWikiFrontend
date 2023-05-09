@@ -79,13 +79,12 @@ export const LocationPost = () => {
 
                 <select type="text" id="type" name="type" value={type}
                         onChange={(e) => setType(e.target.value)}>
-                    <option value="Capital">None</option>
-                    <option value="City">None</option>
-                    <option value="Town">None</option>
-                    <option value="Village">None</option>
-                    <option value="Fort">None</option>
-                    <option value="Forest">None</option>
-                    <option value="Woods">None</option>
+                    <option value="Capital">Capital</option>
+                    <option value="City">City</option>
+                    <option value="Town">Town</option>
+                    <option value="Village">Village</option>
+                    <option value="Fort">Fort</option>
+                    <option value="Port">Port</option>
                 </select>
 
                 <button type="submit">Submit</button>
