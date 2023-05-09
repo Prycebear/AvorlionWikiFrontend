@@ -41,6 +41,7 @@ export const ContinentPost = () => {
     return (
         <div className="ContinentPost">
             <form onSubmit={handleSubmit}>
+                <h1>Continent posting</h1>
                 <label>Name:</label>
                 <input type="text" id="name" name="name" value={name}
                        onChange={(e) => setName(e.target.value)}/>

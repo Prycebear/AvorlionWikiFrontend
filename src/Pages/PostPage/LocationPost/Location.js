@@ -10,6 +10,7 @@ export const LocationPost = () => {
     const [history, setHistory] = useState("");
     const [leader, setLeader] = useState("");
     const [subNation, setSubNation] = useState("");
+    const [type, setType] = useState("");
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,6 +28,7 @@ export const LocationPost = () => {
                     history: history,
                     leader: leader,
                     subNation: subNation,
+                    type: type,
                 }),
             });
             //let resJson = await res;
@@ -37,6 +39,7 @@ export const LocationPost = () => {
                 setHistory("");
                 setSubNation("");
                 setLeader("");
+                setType("");
             } else {
                 console.log(res);
             }
@@ -53,6 +56,7 @@ export const LocationPost = () => {
     return (
         <div className="LocationPost">
             <form onSubmit={handleSubmit}>
+                <h1>Location posting</h1>
                 <label>Name:</label>
                 <input type="text" id="name" name="name" value={name}
                        onChange={(e) => setName(e.target.value)}/>
@@ -72,6 +76,17 @@ export const LocationPost = () => {
                 </select>
                 <label>Image link:</label>
                 <input type="text" id="image" name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
+
+                <select type="text" id="type" name="type" value={type}
+                        onChange={(e) => setType(e.target.value)}>
+                    <option value="Capital">None</option>
+                    <option value="City">None</option>
+                    <option value="Town">None</option>
+                    <option value="Village">None</option>
+                    <option value="Fort">None</option>
+                    <option value="Forest">None</option>
+                    <option value="Woods">None</option>
+                </select>
 
                 <button type="submit">Submit</button>
             </form>

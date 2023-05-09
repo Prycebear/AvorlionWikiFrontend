@@ -53,6 +53,7 @@ export const SubNationPost = () => {
     return (
         <div className="SubNationPost">
             <form onSubmit={handleSubmit}>
+                <h1>SubNation posting</h1>
                 <label>Name:</label>
                 <input type="text" id="name" name="name" value={name}
                        onChange={(e) => setName(e.target.value)}/>
