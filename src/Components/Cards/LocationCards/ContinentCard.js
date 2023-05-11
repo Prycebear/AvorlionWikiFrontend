@@ -15,7 +15,7 @@ export const ContinentCard = () => {
 
                         <div className="ContinentImage">
                             <img
-                                src={item.image}
+                                src={item.continentImage}
                                 onError={({ currentTarget }) => {
                                     currentTarget.onerror = null;
                                     currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
