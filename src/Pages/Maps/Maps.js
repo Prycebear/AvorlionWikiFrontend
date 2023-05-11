@@ -1,4 +1,5 @@
 import "./Maps.css";
+import {ContinentCard} from "../../Components/Cards/LocationCards/ContinentCard";
 
 
 export const Maps = () => {
@@ -6,7 +7,7 @@ export const Maps = () => {
 
     return (
         <div className="Map">
-            <img src = "https://live.staticflickr.com/65535/52652764418_ea08a0dc17.jpg" alt="A map of Keolon" title="MapOfKeolon"/>
+            <ContinentCard></ContinentCard>
         </div>
     )
 }
