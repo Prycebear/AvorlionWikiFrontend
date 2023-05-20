@@ -33,12 +33,14 @@ img{
 a{
     padding: 0;
     text-decoration: none;
+    color: white;
 }
 
 a:hover{
     text-decoration: none;
     background-color: lightslategray;
     border-radius: 8%;
+    color: white;
 }
 
 .CardContent{
