@@ -52,7 +52,7 @@ li{
 
 .CharacterCard:hover{
 
-    transform: scale(140%);
+    transform: scale(120%);
     box-shadow:
     0 0 60px 30px #fff,  /* inner white */
     0 0 100px 60px #f0f, /* middle magenta */

@@ -12,7 +12,9 @@ export const CharacterCard = () => {
         <div className="CharacterWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="CharacterCard" key={item.id}>
+                    return <div className="CharacterCard" key={item.id} to={{pathname: `/character/${item.id}`}}>
+
+                        {/*<Link to={{pathname: `/character/${item.id}`}} className="CardButton">*/}
 
                         <div className="CharacterImage">
                         <img
@@ -31,9 +33,10 @@ export const CharacterCard = () => {
                                     <li id="Race"><h3>{item.race}</h3></li>
                                 </ul>
                                 <p id="desc">{item.shortDescription}</p>
-                                <Link to={{pathname: `/character/${item.id}`}} className="btn btn-primary">Button</Link>
+
                             </div>
                         </div>
+                        {/*</Link>*/}
                     </div>
 
 
