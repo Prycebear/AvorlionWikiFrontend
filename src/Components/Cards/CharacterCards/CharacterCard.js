@@ -14,7 +14,7 @@ export const CharacterCard = () => {
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id} to={{pathname: `/character/${item.id}`}}>
 
-                        {/*<Link to={{pathname: `/character/${item.id}`}} className="CardButton">*/}
+                        <Link to={{pathname: `/character/${item.id}`}} className="CardButton">
 
                         <div className="CharacterImage">
                         <img
@@ -36,7 +36,7 @@ export const CharacterCard = () => {
 
                             </div>
                         </div>
-                        {/*</Link>*/}
+                        </Link>
                     </div>
 
 
