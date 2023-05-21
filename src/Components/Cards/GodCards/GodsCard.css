@@ -6,29 +6,29 @@
     background: silver;
     border: gold solid;
     margin: 1.2rem;
-    width: 18%;
+    width: 15%;
     height: 150px;
     max-height: 100%;
     border-radius: 7%;
     display: inline-block;
     text-align: center;
-    transition: all 1.2s;
+    transition: all 0.5s;
 }
 
-.GodCardContent{
-    margin: 3%;
-    justify-content: center;
+#GodLink{
+    text-decoration: none;
+    color: black;
 }
 
-#card-interior{
-    align-content: center;
-}
+
 
 .GodCard:hover{
 
     transform: scale(140%);
     box-shadow:
-    0 0 60px 30px white,  /* inner white */
-    0 0 100px 60px gold, /* middle magenta */
-    0 0 140px 90px goldenrod; /* outer cyan */
+    0 0 30px 15px white,
+    0 0 50px 30px gold,
+    0 0 70px 45px goldenrod;
+
+    z-index: 1;
 }

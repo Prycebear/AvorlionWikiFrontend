@@ -11,26 +11,25 @@ export const GodCard = () => {
         <div className="GodWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="GodCard" key={item.id} to={{pathname: `/gods/${item.id}`}}>
+                    return <div className="GodCard" key={item.id}>
 
-                        <Link to={{pathname: `/gods/${item.id}`}} className="CardButton">
+                        <Link id='GodLink' to={{pathname: `/gods/${item.id}`}} className="CardButton">
 
                             <div className="GodSymbol">
                                 <img
                                     src={item.imgLink}
-                                    onError={({ currentTarget }) => {
+                                    onError={({currentTarget}) => {
                                         currentTarget.onerror = null;
-                                        currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
+                                        currentTarget.src = "https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
                                     }}
                                 />
                             </div>
                             <div id="card-interior">
-
                                 <div className="CardContent">
+                                    <h4>{item.type}</h4>
+                                    <br/>
                                     <h3 className="GodName">{item.name}</h3>
-
-                                    <p id="desc">{item.shortDescription}</p>
-
+                                    <h4>of the {item.domain}</h4>
                                 </div>
                             </div>
                         </Link>
@@ -42,8 +41,6 @@ export const GodCard = () => {
 
     )
 }
-
-
 
 
 export default GodCard;
