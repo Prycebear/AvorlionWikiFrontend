@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+
 import "./GodsCard.css"
 import useFetch from "../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
@@ -16,7 +16,7 @@ export const GodCard = () => {
                         <Link id='GodLink' to={{pathname: `/gods/${item.id}`}} className="CardButton">
 
                             <div className="GodSymbol">
-                                <img
+                                <img alt='Character art'
                                     src={item.imgLink}
                                     onError={({currentTarget}) => {
                                         currentTarget.onerror = null;

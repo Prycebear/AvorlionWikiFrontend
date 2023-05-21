@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import useFetch from "../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
+import "./ContinentCard.css"
+import imageSourceNull from "../../../Functions/imageSourceNull";
 
 
 export const ContinentCard = () => {
@@ -13,26 +15,23 @@ export const ContinentCard = () => {
                 data.map((item) => {
                     return <div className="ContinentCard" key={item.id}>
 
-                        <div className="ContinentImage">
-                            <img
-                                src={item.continentImage}
-                                onError={({ currentTarget }) => {
-                                    currentTarget.onerror = null;
-                                    currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
-                                }}
-                            />
-                        </div>
-                        <div id="card-interior">
+                        <Link id='ContinentCardLink' to={{pathname: `/continent/${item.id}`}} className="CardButton">
 
-                            <div className="CardContent">
-                                <h3 className="ContinentName">{item.name}</h3>
-                                <ul className="ContinentNations">
-                                    <li id="nations"><h3>{item.name}</h3></li>
-                                </ul>
-                                <p id="desc">{item.description}</p>
-                                {/*<Link to={{pathname: `/character/${item.id}`}} className="btn btn-primary">Button</Link>*/}
+                            <div className="ContinentImage">
+                                <img
+                                    src={imageSourceNull(item.continentImage)}
+                                    onError={({currentTarget}) => {
+                                        currentTarget.onerror = null;
+                                        currentTarget.src = "https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
+                                    }}
+                                />
                             </div>
-                        </div>
+                            <div id="ContinentCardInterior">
+                                <div className="CardContent">
+                                    <h3 id = 'ContinentName' className="ContinentName">{item.name}</h3>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
 
 
@@ -41,8 +40,6 @@ export const ContinentCard = () => {
 
     )
 }
-
-
 
 
 export default ContinentCard;

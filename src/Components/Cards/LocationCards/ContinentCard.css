@@ -1,0 +1,18 @@
+.ContinentCard{
+    background-color: magenta;
+    max-height: 40%;
+    max-width: 100%;
+    margin: 10px;
+    box-shadow: cyan;
+    align-content: center;
+    text-align: center;
+    display: inline-flex;
+    border: navy solid 3px;
+    text-decoration: none;
+    color: white;
+}
+
+#ContinentCardLink{
+    text-decoration: none;
+    color: white;
+}
