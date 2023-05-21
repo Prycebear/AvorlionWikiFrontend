@@ -4,9 +4,18 @@ import useFetch from "../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
 
 
+
+
 export const CharacterCard = () => {
     const [data] = useFetch("https://avorlionbackend.herokuapp.com/character/all")
 
+    let imgSource = (imgSrc) => {
+        if(imgSrc != null){
+            return imgSrc;
+        }else{
+            return 'https://storage.googleapis.com/loveable.appspot.com/medium_dnd_gifts_63bff7355d/medium_dnd_gifts_63bff7355d.jpg'
+        }
+    }
 
     return (
         <div className="CharacterWrap">
@@ -14,24 +23,22 @@ export const CharacterCard = () => {
                 data.map((item) => {
                     return <div className="CharacterCard" key={item.id} to={{pathname: `/character/${item.id}`}}>
 
-                        <Link to={{pathname: `/character/${item.id}`}} className="CardButton">
+                        <Link id = 'CharCardLink' to={{pathname: `/character/${item.id}`}} className="CardButton">
 
                         <div className="CharacterImage">
-                        <img
-                            src={item.imgLink}
+                            <img id = 'CharImg'
+
+                            src= {imgSource(item.imgLink)}
                             onError={({ currentTarget }) => {
                                 currentTarget.onerror = null;
                                 currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
                             }}
-                        />
+                            />
                         </div>
                         <div id="card-interior">
-
                             <div className="CardContent">
-                                <h3 className="CharacterName">{item.firstName} {item.surname}</h3>
-                                <ul className="CharacterDetails">
-                                    <li id="Race"><h3>{item.race}</h3></li>
-                                </ul>
+                                <h3 id = 'CharacterName'>{item.firstName} {item.surname}</h3>
+                                <p id="Race">{item.race}</p>
                                 <p id="desc">{item.shortDescription}</p>
 
                             </div>

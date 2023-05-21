@@ -24,7 +24,7 @@ li {
 
 }
 
-a {
+#NavElement {
     display: inline-block;
     color: white;
     padding: 14px 100px;
