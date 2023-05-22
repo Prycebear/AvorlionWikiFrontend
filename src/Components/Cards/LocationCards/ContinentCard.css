@@ -1,9 +1,14 @@
+.ContinentWrap{
+    text-align: center;
+    margin-top: 3px;
+}
+
 .ContinentCard{
-    background-color: magenta;
+    background-color: darkslateblue;
     max-height: 40%;
     max-width: 100%;
     margin: 10px;
-    box-shadow: cyan;
+    box-shadow: 10px 5px 5px darkslateblue;
     align-content: center;
     text-align: center;
     display: inline-flex;

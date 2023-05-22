@@ -50,7 +50,7 @@ export const LocationPost = () => {
         return alert("New character succesfully added broski!")
     };
 
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/lcation/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/location/all")
 
 
     return (

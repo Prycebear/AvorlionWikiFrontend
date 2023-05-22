@@ -47,7 +47,7 @@ export const SubNationPost = () => {
         return alert("New character succesfully added broski!")
     };
 
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/nation/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/subnation/all")
 
 
     return (
