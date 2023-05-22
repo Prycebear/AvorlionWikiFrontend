@@ -16,7 +16,7 @@ export const LocationPost = () => {
         e.preventDefault();
 
         try {
-            let res = await fetch("https://avorlionbackend.herokuapp.com/nation/add", {
+            let res = await fetch("https://avorlionbackend.herokuapp.com/location/add", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export const LocationPost = () => {
         return alert("New character succesfully added broski!")
     };
 
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/location/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/subnation/all")
 
 
     return (

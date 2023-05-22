@@ -15,7 +15,7 @@ export const SubNationPost = () => {
         e.preventDefault();
 
         try {
-            let res = await fetch("https://avorlionbackend.herokuapp.com/nation/add", {
+            let res = await fetch("https://avorlionbackend.herokuapp.com/subnation/add", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const SubNationPost = () => {
         return alert("New character succesfully added broski!")
     };
 
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/subnation/all")
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/nation/all")
 
 
     return (
