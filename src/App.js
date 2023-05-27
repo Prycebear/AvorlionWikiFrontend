@@ -5,14 +5,16 @@ import Navbar from "./Components/NavBar/NavBar";
 import {CardBackground} from "./Pages/Background/CharacterCard/CardBackground";
 import {Maps} from "./Pages/Maps/Maps";
 import {MainPost} from "./Pages/PostPage/MainPostPage/MainPost";
-import GodCard from "./Components/Cards/GodCards/GodCard";
 import {GodCardBackground} from "./Pages/Background/GodCards/GodCardBackground";
 import DetailCharacter from "./Components/Cards/DetailCards/DetailCharacter/DetailCharacter";
+import DataRepo from "./Pages/DataRepo/DataRepo";
 
 
-const develop = "http://localhost:8080/character/all";
-const prod = "https://avorlionbackend.herokuapp.com/character/all";
+
+
 function App() {
+
+
         return (
             <BrowserRouter>
                 <Routes>
@@ -23,9 +25,11 @@ function App() {
                         <Route path="gods" element={<GodCardBackground />} />
                         <Route path="maps" element={<Maps />} />
                         <Route path="add" element={<MainPost />} />
+                        <Route path="repo" element={<DataRepo />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
         );
+
     }
 export default App;

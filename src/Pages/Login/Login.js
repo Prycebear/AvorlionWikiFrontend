@@ -1,0 +1,24 @@
+import './App.css';
+import {useState} from "react";
+
+
+
+
+function Login() {
+
+    const [login, setLogin] = useState(false);
+
+        return (
+            <div>
+                <h1>Sorry buddy, gotta login if you want to look at this nerd shit :(</h1>
+                <form>
+                    <label>Username</label>
+                    <input type="text" id="name"/>
+                    <label>Password</label>
+                    <input type="text" id="password"/>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        )
+}
+export default Login;
