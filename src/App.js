@@ -26,6 +26,7 @@ function App() {
                         <Route path="maps" element={<Maps />} />
                         <Route path="add" element={<MainPost />} />
                         <Route path="repo" element={<DataRepo />} />
+
                     </Route>
                 </Routes>
             </BrowserRouter>

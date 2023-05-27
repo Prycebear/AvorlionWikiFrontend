@@ -6,6 +6,7 @@ import useFetch from "../../../Hooks/UseFetch";
 export const NationPost = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
+    const [shortDescription, setShortDescription] = useState("");
     const [image, setImage] = useState("");
     const [history, setHistory] = useState("");
     const [leader, setLeader] = useState("");
@@ -23,6 +24,7 @@ export const NationPost = () => {
                 body: JSON.stringify({
                     name: name,
                     description: description,
+                    shortDescription: shortDescription,
                     image: image,
                     history: history,
                     leader: leader,
@@ -33,6 +35,7 @@ export const NationPost = () => {
             if (res.status === 200) {
                 setName("");
                 setDescription("");
+                setShortDescription("")
                 setImage("");
                 setHistory("");
                 setContinent("");
@@ -57,6 +60,10 @@ export const NationPost = () => {
                 <label>Name:</label>
                 <input type="text" id="name" name="name" value={name}
                        onChange={(e) => setName(e.target.value)}/>
+                <br/>
+                <label>Short descritpion:</label>
+                <input type="text" id="shortDesc" name="shortDescription" value={shortDescription}
+                       onChange={(e) => setShortDescription(e.target.value)}/>
                 <br/>
                 <label>Description:</label>
                 <br/>

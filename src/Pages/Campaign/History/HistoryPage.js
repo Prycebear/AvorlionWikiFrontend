@@ -4,7 +4,7 @@ import CharacterCard from "../../../Components/Cards/CharacterCards/CharacterCar
 import "./CardBackground.css"
 import CampaignCard from "../../../Components/Cards/CampaignCard/CampaignCard";
 
-export const CampaignPage = () => {
+export const HistoryPage = () => {
 
 
     return (
