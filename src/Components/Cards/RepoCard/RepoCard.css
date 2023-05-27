@@ -7,9 +7,16 @@
     background-color: darkslateblue;
     text-align: center;
     margin: 1%;
+    text-decoration: none;
+    color: cyan;
 }
 
 #RepoImg{
     height: 100%;
     width: 100%;
+}
+
+#RepoCardLink{
+    width: 100%;
+    height: 100%;
 }

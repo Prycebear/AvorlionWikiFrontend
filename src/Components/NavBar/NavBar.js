@@ -14,11 +14,9 @@ export default function Navbar() {
                 </div>
                 <ul className="NavElement">
                     <li><Link id = 'NavElement' to="/">Home</Link></li>
-                    <li><Link id = 'NavElement' to="/character">Character</Link></li>
-                    <li><Link id = 'NavElement' to="/gods">Gods</Link></li>
-                    <li><Link id = 'NavElement' to="/maps">Locations</Link></li>
+                    <li><Link id = 'NavElement' to="/repo">Wiki</Link></li>
                     <li><Link id = 'NavElement' to="/add">Add</Link></li>
-                    <li><Link id = 'NavElement' to="/repo">Add</Link></li>
+
                 </ul>
             </div>
         </nav>
