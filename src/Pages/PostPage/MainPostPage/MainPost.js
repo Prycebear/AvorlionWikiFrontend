@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./MainPost.css"
 import CharacterCard from "../../../Components/Cards/CharacterCards/CharacterCard";
-import {Maps} from "../../Maps/Maps";
+import {Maps} from "../../Maps/MainMapPage/Maps";
 import {CharacterPost} from "../CharacterPost/CharacterPost";
 import {GodPost} from "../GodPost/GodPost";
 import {ContinentPost} from "../LocationPost/ContinentPost";

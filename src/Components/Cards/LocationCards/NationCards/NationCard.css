@@ -1,0 +1,29 @@
+.NationWrap{
+    text-align: center;
+    margin-top: 3px;
+}
+
+.NationCard{
+    background-color: darkslateblue;
+    max-height: 40%;
+    max-width: 30%;
+    margin: 10px;
+    box-shadow: 10px 5px 5px darkslateblue;
+    align-content: center;
+    text-align: center;
+    display: inline-flex;
+    border: navy solid 3px;
+    text-decoration: none;
+    color: white;
+}
+
+#NationCardLink{
+    text-decoration: none;
+    color: white;
+}
+
+#NationImage{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

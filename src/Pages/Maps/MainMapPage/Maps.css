@@ -1,0 +1,25 @@
+.LocationSheet{
+    background-color: dimgrey;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    text-align: center;
+    padding: 3%;
+}
+
+.OptionElement{
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+.LocationButtons{
+    margin: 3px;
+}
+
+button{
+    background-color: gold;
+    width: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid lightgoldenrodyellow;
+}

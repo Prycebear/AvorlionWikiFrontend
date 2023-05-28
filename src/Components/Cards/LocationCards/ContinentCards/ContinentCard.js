@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import useFetch from "../../../Hooks/UseFetch";
+import useFetch from "../../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
 import "./ContinentCard.css"
-import imageSourceNull from "../../../Functions/imageSourceNull";
+import imageSourceNull from "../../../../Functions/imageSourceNull";
 
 
 export const ContinentCard = () => {
@@ -17,9 +17,9 @@ export const ContinentCard = () => {
 
                         <Link id='ContinentCardLink' to={{pathname: `/continent/${item.id}`}} className="CardButton">
 
-                            <div className="ContinentImage">
-                                <img
-                                    src={imageSourceNull(item.continentImage)}
+                            <div>
+                                <img id = "ContinentImage"
+                                    src={imageSourceNull({item.continentImage})}
                                     onError={({currentTarget}) => {
                                         currentTarget.onerror = null;
                                         currentTarget.src = "https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
