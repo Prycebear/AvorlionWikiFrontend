@@ -17,9 +17,9 @@ export const NationCard = () => {
 
                         <Link id='NationCardLink' to={{pathname: `/Nation/${item.id}`}} className="CardButton">
 
-                            <div>
+                            <div id = "imageDiv">
                                 <img  id ="NationImage"
-                                    src={imageSourceNull("https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png")}
+                                    src={imageSourceNull(item.image)}
                                     onError={({currentTarget}) => {
                                         currentTarget.onerror = null;
                                         currentTarget.src = "https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
@@ -27,7 +27,7 @@ export const NationCard = () => {
                                 />
                             </div>
                             <div id="NationCardInterior">
-                                <div className="CardContent">
+                                <div className="NationCardContent">
                                     <h3 id = 'NationName' className="NationName">{item.name}</h3>
                                 </div>
                             </div>
