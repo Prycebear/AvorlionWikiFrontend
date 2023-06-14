@@ -10,12 +10,15 @@
 
 
 
-.DetailPicture{
+#DetailPicture{
+
  border-radius: 3%;
+    height: 100%;
+    width: 100%;
 }
 
 .CharacterDescription{
-    font-size: 200px;
+    font-size: 20px;
 
 }
 
@@ -23,12 +26,13 @@
     font-size: 20px;
 }
 
-.SideBarInfoCharacterDetails{
+#SideBarInfoCharacterDetails{
     float: right;
     margin-left: 5%;
     background-color: #333333;
     border-radius: 3%;
-    width: 50%;
+    width: 100%;
     list-style: none;
+    margin-right: 2%;
 
 }
