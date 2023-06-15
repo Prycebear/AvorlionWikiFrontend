@@ -10,35 +10,35 @@ export const DetailCharacter = () => {
 
     return (
         <div className="DetailCharacter" key={data.id}>
-            <h1>{data.firstName} {data.surname}</h1>
+            <h1 id = "DetailName">{data.firstName} {data.surname}</h1>
 
             <br/>
-            <div className="DataMain">
+            <div id="DataMain">
 
-                <div className="CharacterDescription">
-                    <h2>Description</h2>
+                <div id="CharacterDescription">
+                    <h2 id = "DetailHeading">Description</h2>
                     <p className="DetailDesc">{data.description}</p>
                     <br/>
-                    <h2>History</h2>
+                    <h2 id = "DetailHeading">History</h2>
                     <p className="DetailHist">{data.history}</p>
                 </div>
                 <div id="SideBarInfoCharacterDetails">
                     <img id="DetailPicture" src = {data.imgLink}/>
-                        <h3>Born Location</h3>
+                        <h4>Born Location</h4>
                         <li>Born Location</li>
-                        <h3>Born Date</h3>
+                        <h4>Born Date</h4>
                         <li>Born Date</li>
-                        <h3>Death Location</h3>
+                        <h4>Death Location</h4>
                         <li>Death Location</li>
-                        <h3>Death Date</h3>
+                        <h4>Death Date</h4>
                         <li>Death Date</li>
-                        <h3>Home</h3>
+                        <h4>Home</h4>
                         <li>Home</li>
-                        <h3>God</h3>
+                        <h4>God</h4>
                         <li>God</li>
-                        <h3>Affiliations</h3>
+                        <h4>Affiliations</h4>
                         <li>Affiliations</li>
-                        <h3>Alignment</h3>
+                        <h4>Alignment</h4>
                         <li>Alignment</li>
                 </div>
             </div>

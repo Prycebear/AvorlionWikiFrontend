@@ -1,38 +1,31 @@
-.DetailCharacter{
-    text-align: center;
-    padding: 5px;
-    background-color: dimgray;
-}
 
-.DataMain{
+#DataMain{
     display: inline-flex;
 }
 
-
-
-#DetailPicture{
-
- border-radius: 3%;
-    height: 100%;
-    width: 100%;
+#DetailName{
+    margin: 10px;
+    text-align: center;
 }
 
-.CharacterDescription{
-    font-size: 20px;
-
-}
-
-.DetailDesc{
-    font-size: 20px;
+#CharacterDescription{
+    margin-left: 1%;
 }
 
 #SideBarInfoCharacterDetails{
-    float: right;
-    margin-left: 5%;
-    background-color: #333333;
-    border-radius: 3%;
-    width: 100%;
-    list-style: none;
-    margin-right: 2%;
+    background-color: magenta;
+    margin: 2%;
+    height: 100%;
+    width: 20%;
+}
 
+#DetailPicture{
+    background-color: magenta;
+    height: 200px;
+    width: 200px;
+}
+
+#DetailHeading{
+    text-align: center;
+    margin-bottom: 1%;
 }
