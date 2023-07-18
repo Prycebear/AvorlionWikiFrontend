@@ -8,6 +8,7 @@ import {ContinentPost} from "../LocationPost/ContinentPost";
 import {NationPost} from "../LocationPost/NationPost";
 import {SubNationPost} from "../LocationPost/SubNationPost";
 import {LocationPost} from "../LocationPost/Location";
+import {Signup} from "../../Login/Signup";
 
 
 export const MainPost = () => {
@@ -24,6 +25,7 @@ export const MainPost = () => {
                 <button onClick={() => setPost('nation')}>Nation</button>
                 <button onClick={() => setPost('subnation')}>SubNation</button>
                 <button onClick={() => setPost('location')}>Location</button>
+                <button onClick={() => setPost('signup')}>Signup</button>
             </div>
             <div className="PostForm">
                 {post === 'character' && (
@@ -48,6 +50,10 @@ export const MainPost = () => {
 
                 {post === 'location' && (
                     <LocationPost/>
+                )}
+
+                {post === 'signup' && (
+                    <Signup/>
                 )}
 
             </div>
