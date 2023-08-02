@@ -8,9 +8,7 @@ import imageSourceNull from "../../../Functions/imageSourceNull";
 
 
 export const CharacterCard = () => {
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/character/all",{
-        mode: 'no-cors'
-    });
+    const [data] = useFetch("https://avorlionbackend.herokuapp.com/character/all");
 
 
 
