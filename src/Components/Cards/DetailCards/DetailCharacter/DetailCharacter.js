@@ -6,21 +6,21 @@ import {useParams} from "react-router-dom";
 
 export const DetailCharacter = () => {
     const {id} = useParams()
-    const [data] = useFetch(`https://avorlionbackend.herokuapp.com/character/${id}`)
+    const [data] = useFetch(`http://localhost:8080/characters/playercharacters/${id}`)
 
     return (
-        <div className="DetailCharacter" key={data.id}>
-            <h1 id = "DetailName">{data.firstName} {data.surname}</h1>
+        <div className="DetailCharacter" key={data.characterid}>
+            <h1 id = "DetailName">{data.characterFirstName} {data.characterLastName}</h1>
 
             <br/>
             <div id="DataMain">
 
                 <div id="CharacterDescription">
                     <h2 id = "DetailHeading">Description</h2>
-                    <p className="DetailDesc">{data.description}</p>
+                    <p className="DetailDesc">{data.characterDescription}</p>
                     <br/>
                     <h2 id = "DetailHeading">History</h2>
-                    <p className="DetailHist">{data.history}</p>
+                    <p className="DetailHist">Billima</p>
                 </div>
                 <div id="SideBarInfoCharacterDetails">
                     <img id="DetailPicture" src = {data.imgLink}/>

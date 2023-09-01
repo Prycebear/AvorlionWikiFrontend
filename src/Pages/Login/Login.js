@@ -1,4 +1,4 @@
-import './App.css';
+
 import {useState} from "react";
 
 
@@ -15,7 +15,7 @@ function Login() {
                     <label>Username</label>
                     <input type="text" id="name"/>
                     <label>Password</label>
-                    <input type="text" id="password"/>
+                    <input type="password" id="password"/>
                     <button type="submit">Submit</button>
                 </form>
             </div>

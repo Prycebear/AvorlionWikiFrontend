@@ -8,6 +8,9 @@ import {MainPost} from "./Pages/PostPage/MainPostPage/MainPost";
 import {GodCardBackground} from "./Pages/Background/GodCards/GodCardBackground";
 import DetailCharacter from "./Components/Cards/DetailCards/DetailCharacter/DetailCharacter";
 import DataRepo from "./Pages/DataRepo/DataRepo";
+import SpeciesCard from "./Components/Cards/SpeciesCard/SpeciesCard";
+import Login from "./Pages/Login/Login";
+import CampaignPage from "./Pages/Campaign/Campaigns/CampaignPage";
 
 
 
@@ -21,11 +24,14 @@ function App() {
                     <Route path="/" element={<Navbar />}>
                         <Route index element={<Home />} />
                         <Route path="character" element={<CardBackground />} />
-                        <Route path="character/:id" element={<DetailCharacter/>}/>
+                        <Route path="characters/playercharacters/:id" element={<DetailCharacter/>}/>
                         <Route path="gods" element={<GodCardBackground />} />
                         <Route path="maps" element={<Maps />} />
                         <Route path="add" element={<MainPost />} />
                         <Route path="repo" element={<DataRepo />} />
+                        <Route path="species" element={<SpeciesCard />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="campaign" element={<CampaignPage />} />
 
                     </Route>
                 </Routes>

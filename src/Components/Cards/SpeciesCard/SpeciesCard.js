@@ -1,5 +1,5 @@
 
-import "./CharacterCard.css"
+import "./SpeciesCard.css"
 import useFetch from "../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
 import imageSourceNull from "../../../Functions/imageSourceNull";
@@ -7,20 +7,20 @@ import imageSourceNull from "../../../Functions/imageSourceNull";
 
 
 
-export const CharacterCard = () => {
-    const [data] = useFetch("http://localhost:8080/characters/playercharacters/all");
+export const SpeciesCard = () => {
+    const [data] = useFetch("http://localhost:8080/species/all");
 
 
 
     return (
-        <div className="CharacterWrap">
+        <div className="SpeciesWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="CharacterCard" key={item.characterId}>
+                    return <div className="CharacterCard" key={item.speciesid}>
 
-                        <Link id = 'CharCardLink' to={{pathname: `/characters/playercharacters/${item.characterId}`}} className="CardButton">
+                        <Link id = 'SpeciesCardLink' to={{pathname: `/species/${item.speciesid}`}} className="CardButton">
 
-                        <div className="CharacterImage">
+                        <div className="SpeciesImage">
                             <img id = 'CharImg'
                             alt = 'Whatever youre expecting'
                             src= {imageSourceNull(item.characterImageLink)}
@@ -32,10 +32,8 @@ export const CharacterCard = () => {
                         </div>
                         <div id="card-interior">
                             <div className="CardContent">
-                                <h3 id = 'CharacterName'>{item.characterFirstName} {item.characterLastName}</h3>
-                                <p id="Race">{item.species_id}</p>
-                                <p id="desc">{item.shortCharacterDescription}</p>
-
+                                <h3 id = 'SpeciesName'>{item.speciesName}</h3>
+                                <p id="Race">{item.speciesShortDescription}</p>
                             </div>
                         </div>
                         </Link>
@@ -51,4 +49,4 @@ export const CharacterCard = () => {
 
 
 
-    export default CharacterCard;
+    export default SpeciesCard;

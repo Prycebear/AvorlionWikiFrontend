@@ -1,0 +1,60 @@
+.SpeciesWrap{
+    text-align: center;
+}
+
+.SpeciesCard{
+    background: lightslategray;
+    border: 3px darkslategray solid;
+    height: 300px;
+    width: 12%;
+    margin: 5px;
+    display: inline-flex;
+    text-align: center;
+    transition-duration: 0.8s;
+}
+
+#SpeciesCardLink{
+    text-decoration: none;
+    color: white;
+}
+
+#SpeciesName{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+#Race{
+    font-size: 12px;
+}
+
+#desc{
+    font-size: 12px;
+}
+
+#CharImg{
+    max-width: 100%;
+    width: 100%;
+    border-radius: 2px 2px 0% 0%;
+    object-fit: cover;
+    height: 200px;
+    float: bottom;
+    object-position: 50% 1%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+
+
+
+
+.SpeciesCard:hover{
+
+    transform: scale(120%);
+    box-shadow:
+    0 0 20px 10px #fff,  /* inner white */
+    0 0 35px 20px #f0f, /* middle magenta */
+    0 0 50px 30px #0ff; /* outer cyan */
+    z-index: 1;
+}
+
