@@ -12,10 +12,11 @@ export const SpeciesCard = () => {
 
 
 
+
     return (
         <div className="SpeciesWrap">
-            {data &&
-                data.map((item) => {
+            {data.sort((a,b) => a.speciesName.localeCompare(b.speciesName))
+                .map((item) => {
                     return <div className="CharacterCard" key={item.speciesid}>
 
                         <Link id = 'SpeciesCardLink' to={{pathname: `/species/${item.speciesid}`}} className="CardButton">
