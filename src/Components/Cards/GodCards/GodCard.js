@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 
 export const GodCard = () => {
-    const [data] = useFetch("http://localhost:8080/gods/all")
+    const [data] = useFetch("https://avorlionwikibackend-3712a5113557.herokuapp.com/gods/all")
 
     return (
         <div className="GodWrap">
