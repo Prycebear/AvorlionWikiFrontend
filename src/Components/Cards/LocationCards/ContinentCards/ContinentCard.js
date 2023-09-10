@@ -6,16 +6,16 @@ import imageSourceNull from "../../../../Functions/imageSourceNull";
 
 
 export const ContinentCard = () => {
-    const [data] = useFetch("https://avorlionbackend.herokuapp.com/continent/all")
+    const [data] = useFetch("https://avorlionwikibackend-3712a5113557.herokuapp.com/location/continent/all")
 
 
     return (
         <div className="ContinentWrap">
             {data &&
                 data.map((item) => {
-                    return <div className="ContinentCard" key={item.id}>
+                    return <div className="ContinentCard" key={item.locationsId}>
 
-                        <Link id='ContinentCardLink' to={{pathname: `/continent/${item.id}`}} className="CardButton">
+                        <Link id='ContinentCardLink' to={{pathname: `/continent/${item.locationsId}`}} className="CardButton">
 
                             <div>
                                 <img id = "ContinentImage"
@@ -28,7 +28,8 @@ export const ContinentCard = () => {
                             </div>
                             <div id="ContinentCardInterior">
                                 <div className="CardContent">
-                                    <h3 id = 'ContinentName' className="ContinentName">{item.name}</h3>
+                                    <h3 id = 'ContinentName' className="ContinentName">{item.locationName}</h3>
+                                    <p>{item.shortLocationDescription}</p>
                                 </div>
                             </div>
                         </Link>

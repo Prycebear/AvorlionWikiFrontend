@@ -1,20 +1,44 @@
 import React, {useEffect, useState} from "react";
 import useFetch from "../../../Hooks/UseFetch";
 import {Link} from "react-router-dom";
+import imageSourceNull from "../../../Functions/imageSourceNull";
 
 
 export const CampaignCard = () => {
-        const [data] = useFetch("https://avorlionbackend.herokuapp.com/character/all")
+        const [data] = useFetch("https://avorlionwikibackend-3712a5113557.herokuapp.com/campaign/all")
 
 
         return (
-            <Link to="">
-                    <img src="null"/>
-                    <h1>Title</h1>
-                    <h2>Chapter</h2>
-                    <h3>Date</h3>
-                    <h3>Location</h3>
-            </Link>
+            <div className="CampaignWrap">
+                {data &&
+                    data.map((item) => {
+                        return <div className="CharacterCard" key={item.campaignId}>
+
+                            <Link id = 'CharCardLink' to={{pathname: `/characters/playercharacters/${item.campaignId}`}} className="CardButton">
+
+                                <div className="CharacterImage">
+                                    <img id = 'CharImg'
+                                         alt = 'Whatever youre expecting'
+                                         src= {imageSourceNull(item.characterImageLink)}
+                                         onError={({ currentTarget }) => {
+                                             currentTarget.onerror = null;
+                                             currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
+                                         }}
+                                    />
+                                </div>
+                                <div id="card-interior">
+                                    <div className="CardContent">
+                                        <h3 id = 'CharacterName'>{item.campaignName}</h3>
+                                        <p id="Race">{item.campaignType}</p>
+
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+
+
+                    })}
+            </div>
         );
 }
 
