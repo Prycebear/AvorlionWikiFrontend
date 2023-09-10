@@ -8,7 +8,7 @@ import imageSourceNull from "../../../Functions/imageSourceNull";
 
 
 export const CharacterCard = () => {
-    const [data] = useFetch("http://localhost:8080/characters/playercharacters/all");
+    const [data] = useFetch("https://avorlionwikibackend-3712a5113557.herokuapp.com/characters/playercharacters/all");
 
 
 
