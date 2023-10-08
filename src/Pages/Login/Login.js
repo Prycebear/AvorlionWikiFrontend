@@ -10,7 +10,7 @@ function Login() {
 
         return (
             <div>
-                <h1>Sorry buddy, gotta login if you want to look at this nerd shit :(</h1>
+                <h1>Sorry buddy, gotta login if you want to look at this nerd stuff :( Shame the front end doesnt work for this just yet :)</h1>
                 <form>
                     <label>Username</label>
                     <input type="text" id="name"/>
