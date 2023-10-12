@@ -11,6 +11,7 @@ import DataRepo from "./Pages/DataRepo/DataRepo";
 import SpeciesCard from "./Components/Cards/SpeciesCard/SpeciesCard";
 import Login from "./Pages/Login/Login";
 import CampaignPage from "./Pages/Campaign/Campaigns/CampaignPage";
+import SpeciesBackground from "./Pages/Background/SpeciesCArd/SpeciesBackground";
 
 
 
@@ -30,6 +31,7 @@ function App() {
                         <Route path="add" element={<MainPost />} />
                         <Route path="repo" element={<DataRepo />} />
                         <Route path="species" element={<SpeciesCard />} />
+                        <Route path="species/speciesid/:id" element={<SpeciesBackground/>}/>
                         <Route path="login" element={<Login />} />
                         <Route path="campaign" element={<CampaignPage />} />
 

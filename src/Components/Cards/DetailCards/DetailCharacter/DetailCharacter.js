@@ -6,11 +6,12 @@ import {useParams} from "react-router-dom";
 
 export const DetailCharacter = () => {
     const {id} = useParams()
-    const [data] = useFetch(`http://localhost:8080/characters/playercharacters/${id}`)
+    const [data] = useFetch(`https://avorlionwikibackend-3712a5113557.herokuapp.com/characters/playercharacters/${id}`);
+
 
     return (
         <div className="DetailCharacter" key={data.characterid}>
-            <h1 id = "DetailName">{data.characterFirstName} {data.characterLastName}</h1>
+            <h1 id = "DetailName">{data.CharacterFirstName} {data.CharacterLastName}</h1>
 
             <br/>
             <div id="DataMain">
@@ -20,10 +21,10 @@ export const DetailCharacter = () => {
                     <p className="DetailDesc">{data.characterDescription}</p>
                     <br/>
                     <h2 id = "DetailHeading">History</h2>
-                    <p className="DetailHist">Billima</p>
+                    <p className="DetailHist">History</p>
                 </div>
                 <div id="SideBarInfoCharacterDetails">
-                    <img id="DetailPicture" src = {data.imgLink}/>
+                    <img id="DetailPicture" src = {data.characterImageLink}/>
                         <h4>Born Location</h4>
                         <li>Born Location</li>
                         <h4>Born Date</h4>
@@ -35,7 +36,7 @@ export const DetailCharacter = () => {
                         <h4>Home</h4>
                         <li>Home</li>
                         <h4>God</h4>
-                        <li>God</li>
+                        <li></li>
                         <h4>Affiliations</h4>
                         <li>Affiliations</li>
                         <h4>Alignment</h4>

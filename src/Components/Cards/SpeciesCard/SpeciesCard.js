@@ -19,12 +19,12 @@ export const SpeciesCard = () => {
                 .map((item) => {
                     return <div className="CharacterCard" key={item.speciesid}>
 
-                        <Link id = 'SpeciesCardLink' to={{pathname: `/species/${item.speciesid}`}} className="CardButton">
+                        <Link id = 'SpeciesCardLink' to={{pathname: `/species/speciesid/${item.speciesid}`}} className="CardButton">
 
                         <div className="SpeciesImage">
                             <img id = 'CharImg'
                             alt = 'Whatever youre expecting'
-                            src= {imageSourceNull(item.characterImageLink)}
+                            src= {imageSourceNull(item.speciesImgLink)}
                             onError={({ currentTarget }) => {
                                 currentTarget.onerror = null;
                                 currentTarget.src="https://southernpercussion.com/wp-content/uploads/2021/09/placeholder.png";
